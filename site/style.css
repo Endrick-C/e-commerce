@@ -1,0 +1,154 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); /* altura da tela menos header e footer */
+  background-color: #f4f7ff; /* fundo levemente azulado, estilo app */
+  padding: 20px;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 14px rgba(17, 31, 162, 0.08);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #53CBF3;
+  box-shadow: 0 10px 24px rgba(84, 120, 255, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: #f4f7ff;
+}
+
+.nome-produto {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #111FA2; /* azul escuro principal */
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.descricao {
+  font-size: 14px;
+  color: #5b5f7a;
+  flex: 1;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111FA2;
+  background: #FFDE42; /* amarelo destaque, tipo etiqueta iFood */
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+form {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  border-top: 6px solid #FFDE42; /* faixa amarela no topo, estilo iFood */
+  box-shadow: 0 8px 24px rgba(17, 31, 162, 0.12);
+  width: 100%;
+  max-width: 500px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #111FA2;
+}
+
+.input_texto,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #d7dcf5;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #111FA2;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input_texto:focus,
+select:focus {
+  border-color: #5478FF;
+  box-shadow: 0 0 0 3px rgba(83, 203, 243, 0.35);
+}
+
+.input_texto[readonly] {
+  background-color: #eef2ff; 
+  color: #6c757d;
+  cursor: not-allowed;
+  border: 2px solid #d7dcf5;
+}
+
+select:disabled {
+  background-color: #eef2ff;
+  color: #6c757d;
+  cursor: not-allowed;
+  border: 2px solid #d7dcf5;
+}
+
+.btn_enviar {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px; /* botão arredondado estilo app */
+  background-color: #FFDE42; /* amarelo principal (CTA) */
+  color: #111FA2;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn_enviar:hover {
+  background-color: #53CBF3; /* vira azul claro no hover */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(83, 203, 243, 0.45);
+}
+
+.btn_enviar:active {
+  background-color: #5478FF;
+  transform: translateY(0);
+}
+
+#navbar-custom {
+  background-color: #111FA2 !important;
+}
